@@ -46,6 +46,9 @@ while menu_choice != 5:
         name = input("Name: ")
         if name in usernames:
             del usernames[name] #delete username by name
+        elif name in usernames.values():
+            value = (usernames.keys()[list(usernames.values()).index(name)])
+            del usernames[value] #delete username by username
         else:
             print("Name does not exist.") #catch error if name does not exist
 
